@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aviation | AR</title>
+        <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: lightskyblue;
+          }
+  
+          .navbar {
+              overflow: hidden;
+              background-color: #333;
+              position: fixed;
+              top: 0;
+              width: 100%;
+              z-index: 1000;
+              text-align: center;
+          }
+  
+          .navbar a {
+              /* float: left;
+              display: block; */
+              display: inline-block;
+              color: #f2f2f2;
+              text-align: center;
+              padding: 14px 20px;
+              text-decoration: none;
+              transition: background-color 0.3s;
+          }
+  
+          .navbar a:hover {
+              background-color: #ddd;
+              color: black;
+          }
+  
+          .active {
+              background-color: #ff6600;
+              color: white !important;
+          }
+  
+          .content {
+              padding: 30px;
+              background-color: #fff;
+              /* background-color: beige; */
+              margin-top: 70px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              border-radius: 8px;
+              /* text-align: center; */
+              /* background-repeat: no-repeat; */
+              /* background-size: contain; */
+              /* background-position: center; */
+          }
+  
+          h1, h2 {
+              color: #333;
+              text-align: center;
+          }
+  
+          p {
+              color: #666;
+              text-align: justify;
+          }
+  
+          ul {
+              color: #666;
+              list-style-type: disc;
+              padding-left: 20px;
+              text-align: left;
+          }
+
+          .faq-question:hover {
+            cursor: pointer;
+          }
+  
+          @media only screen and (max-width: 600px) {
+              .navbar a {
+                  float: none;
+                  display: block;
+                  /* text-align: left; */
+                  text-align: center;
+              }
+              .content {
+                margin-top: 100px; /* Adjusted margin top for smaller screens */
+                /* background-size: cover; */
+              }
+          }
+
+          /* #home {
+            background-image: url('home.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          } */
+
+          /* #history {
+            background-image: url('history.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          } */
+
+          /* #companies {
+            background-image: url('company.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          } */
+
+          #faq h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          #faq h1::after {
+            content: "";
+            display: inline-block;
+            width: 50px; /* width of your image */
+            height: 50px; /* height of your image */
+            background-image: url('faq.svg');
+            background-size: cover;
+            margin-left: 10px;
+          }
+
+          #about a img {
+            margin-right: 10px;
+          }
+        </style>
+        
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="#home" class="active">Home</a> 
+            <a href="#history">History</a> 
+            <a href="#companies">Companies</a> 
+            <a href="#products">Products</a> 
+            <a href="#faq">FAQ</a>
+            <a href="#about">About</a> 
+        </div>
+        <div id="home" class="content">
+            <h1>Home</h1>
+            <p>Aeroplanes, also known as airplanes or aircraft, are vehicles that are capable of flight. An aircraft is a vehicle that is able to fly by gaining support from the air. It counters the force of gravity by using either static lift or the dynamic lift of an airfoil, or, in a few cases, direct downward thrust from its engines. Common examples of aircraft include airplanes, helicopters, airships (including blimps), gliders, paramotors, and hot air balloons. They are designed for various purposes, including transportation of passengers and cargo, military operations, and recreational flying.</p>
+            <p>The human activity that surrounds aircraft is called aviation. The science of aviation, including designing and building aircraft, is called aeronautics. Crewed aircraft are flown by an onboard pilot, whereas unmanned aerial vehicles may be remotely controlled or self-controlled by onboard computers. Aircraft may be classified by different criteria, such as lift type, aircraft propulsion (if any), usage and others.</p>
+        </div>
+        <div id="history" class="content">
+            <h1>History</h1>
+            <p>The history of aviation is a fascinating journey that spans over two thousand years, from the earliest forms of flight to the advanced aircraft we see today.</p>
+            <ul>
+              <li><b>Ancient Times: </b>The earliest form of man-made flight was kite flying, which originated in China several hundred years BC.</li>
+              <li><b>15th Century: </b>Leonardo da Vinci’s dream of flight was expressed in several designs, although they were based on then-limited scientific understanding.</li>
+              <li><b>Late 18th Century: </b>The Montgolfier brothers invented the hot-air balloon, marking the beginning of manned flights. Around the same time, the discovery of hydrogen gas led to the invention of the hydrogen balloon.</li>
+              <li><b>Early 20th Century: </b>The Wright Brothers, Orville and Wilbur Wright, made significant contributions to aviation. They are credited with inventing, building, and flying the world’s first successful airplane.</li>
+              <li><b>Post World War II: </b>After World War II, the flying boats were replaced by land planes, and the new and immensely powerful jet engine revolutionised both air travel and military aviation.</li>
+              <li><b>21st Century: </b>The 21st century saw the large-scale use of pilotless drones for military, civilian and leisure use. With digital controls, inherently unstable aircraft such as flying wings became possible.</li>
+            </ul>
+        </div>
+        <div id="companies" class="content">
+            <h1>Major Companies</h1>
+            <h2><u>Airbus</u></h2>
+            <p>Airbus SE is a European multinational aerospace corporation. The company consists of three core units. Its primary business is the design and manufacturing of commercial aircraft but it also has separate defence and space and helicopter divisions. Since 2019, Airbus is the world's largest manufacturer of airliners as well as the leading helicopter manufacturer.</p>
+            <ul>
+                <li><b>Founded: </b>18 December, 1970</li>
+                <li><b>Headquarters: </b>Toulouse, France</li>
+                <li><b>Products: </b>Military Aircrafts, Civilian Airliners, Helicopters, Missiles, Rockets</li>
+                <li><b>Website: </b><a href="https://www.airbus.com/en" target="_blank">Visit Airbus!</a></li>
+            </ul>
+            <h2><u>Boeing</u></h2>
+            <p>The Boeing Company is an American multinational corporation that designs, manufactures, and sells airplanes, rotorcraft, rockets, satellites, telecommunications equipment, and missiles worldwide. The company also provides leasing and product support services. Boeing is among the largest global aerospace manufacturers; it is the third-largest defense contractor in the world based on 2020 revenue and is the largest exporter in the United States by dollar value. Boeing's stock is a component of the Dow Jones Industrial Average.</p>
+            <ul>
+                <li><b>Founded: </b>15 July, 1916</li>
+                <li><b>Headquarters: </b>Arlington, Virginia, United States</li>
+                <li><b>Products: </b>Commercial Airliners, Military Aircrafts, Satellites, Missiles, Rockets</li>
+                <li><b>Website: </b><a href="https://www.boeing.com/" target="_blank">Visit Boeing!</a></li>
+            </ul>
+        </div>
+        <div id="products" class="content">
+            <h1>Products</h1>
+            <h2><u>Airbus</u></h2>
+            <p><i>Aircrafts:</i></p>
+            <ul>
+              <li>A220 (Passenger)</li>
+              <li>A300 (Passenger)</li>
+              <li>A310 (Passenger)</li>
+              <li>A318 (Passenger)</li>
+              <li>A319 (Passenger)</li>
+              <li>A320 (Passenger, Corporate Jet, Freighter)</li>
+              <li>A321 (Passenger, Freighter)</li>
+              <li>A330 (Passenger, Corporate Jet, Freighter, Military)</li>
+              <li>A350 (Passenger, Corporate Jet, Freighter)</li>
+              <li>A380 (Passenger)</li>
+              <li>ACJ TwoTwenty (Corporate Jet)</li>
+              <li>Beluga (Freighter)</li>
+              <li>A400M (Military)</li>
+              <li>C295 (Military)</li>
+              <li>Eurofighter (Military)</li>
+            </ul>
+            <p><i>Helicopters:</i></p>
+            <ul>
+              <li>H120 (Civil)</li>
+              <li>H125 (Civil, Military)</li>
+              <li>H130 (Civil)</li>
+              <li>H135 (Civil, Military)</li>
+              <li>H145 (Civil, Military)</li>
+              <li>H155 (Civil)</li>
+              <li>H160 (Civil, Military)</li> 
+              <li>H175 (Civil, Military)</li>
+              <li>H215 (Civil, Military)</li> 
+              <li>H225 (Civil, Military)</li>
+              <li>ACH (Civil)</li>
+              <li>Tiger (Military)</li>
+              <li>NH90 (Military)</li>
+            </ul>
+            <h2><u>Boeing</u></h2>
+            <p><i>Aircrafts:</i></p>
+            <ul>
+              <li>707 (Passenger)</li>
+              <li>717 (Passenger)</li>
+              <li>727 (Passenger)</li>
+              <li>737 (Passenger, Freighter, Business Jet)</li>
+              <li>747 (Passenger, Freighter)</li>
+              <li>757 (Passenger)</li>
+              <li>767 (Passenger, Freighter)</li>
+              <li>777 (Passenger, Freighter, Business Jet)</li>
+              <li>787 (Passenger, Business Jet)</li>
+              <li>E-7 Airborne Early Warning & Control (Defense)</li>
+              <li>Air Force One (Defense)</li>
+              <li>C-17 Globemaster (Defense)</li>
+              <li>C-40A (Defense)</li>
+              <li>KC-46A Pegasus (Defense)</li>
+              <li>P-8A Poseidon (Defense)</li>
+              <li>F/A-18 Super Hornet (Defense)</li>
+              <li>EA-18G Growler (Defense)</li>
+              <li>F-15EX (Defense)</li>
+              <li>T-7A Red Hawk (Defense)</li>
+              <li>B-52 (Defense)</li>
+            </ul>
+            <p><i>Helicopters:</i></p>
+            <ul>
+              <li>AH-6 (Defense)</li>
+              <li>CH-47 Chinook (Defense)</li>
+              <li>MH-139 (Defense)</li>
+              <li>AH-64 Apache (Defense)</li>
+              <li>V-22 Osprey (Defense)</li>
+            </ul>
+        </div>
+        <div id="faq" class="content">
+            <h1>Frequently Asked Questions</h1>
+            <br>
+            <h3 style="color: red;"><i><u>General Information about Airplanes:</u></i></h3>
+            <br>
+            <div class="faq-question">
+                <h3>Q: What is the biggest airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The largest airplane in the world by wingspan is the <b>Stratolaunch.</b> In terms of length, the largest airplane is the <b>Antonov An-225 Mriya.</b></p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the smallest airplane in the world?</h3>
+                <div class="faq-answer
+                " style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The smallest airplane in the world is the <b>Bumble Bee II</b>, which has a wingspan of 5.8 feet and a length of 6.7 feet.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the fastest airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The fastest unmanned aircraft in the world is the <b>NASA X-43</b> which hit Mach 9.6 (nearly 10 times the speed of sound) on November 16, 2004 at an altitude of 33,223 meters over the Pacific Ocean. If you’re talking about manned flights, the <b>NASA X-15</b> with its Mach 6.72 speed is still king of the hill. Both the X-15 and the X-43A are experimental aircrafts.</p>
+                    <p>The <b>Lockheed SR-71 Blackbird</b> holds the speed record for the fastest air-breathing manned aircraft, reaching a maximum speed of 2,200 mph (Mach 3.3), which has actually been put to use outside gathering experimental data. <a href="https://www.universetoday.com/40624/fastest-jet-in-the-world/" target="_blank">Reference!</a></p>
+                    <p>When considering operational aircraft used for regular missions, the fastest jets are typically military fighters like the <b>F-22 Raptor</b> or the <b>MiG-31</b>, which can reach speeds exceeding Mach 2.</p>
+                    <p>In terms of the fastest aircraft ever to carry passengers, the <b>Concorde</b> is undoubtedly the victor here. The Concorde could cruise at a maximum of Mach 2.04 (1,354 mph / 2,455 kph) and was the only commercial aircraft to break the sound barrier.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the most produced airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The most produced airplane in the world is the <b>Cessna 172 Skyhawk</b>, with over 44,000 units built since 1956.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the most expensive airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The most expensive airplane in the world is the <b>B-2 Spirit</b> (a stealth bomber military aircraft), which costs around $2.1 billion per unit.</p>
+                    <p>In terms of most expensive private jet, it's the <b>Airbus A380 custom-made</b> for Saudi Prince Al-Waleed bin Talal, which costs around $500 million.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the largest passenger airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The largest passenger airplane in the world is the <b>Airbus A380</b>, which can carry up to 853 passengers in a single-class configuration.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the largest cargo airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The largest cargo airplane in the world is the <b>Antonov An-225 Mriya</b>, which has a maximum payload capacity of 250,000 kg.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the most popular airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The most popular airplane in the world based on active use and passenger flights is the <b>Airbus A320</b> family. As of 2023, over 11,000 A320 aircraft have been built, with nearly 8,000 actively serving airlines worldwide.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the most advanced airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The most advanced airplane in the world are the <b>Lockheed Martin F-22 Raptor</b> and the <b>F-35 Lightning II</b>, which are fifth-generation stealth fighter jets. These multirole fighter jets combines stealth, advanced sensors, powerful engines, and various weapon capabilities, making it highly versatile for diverse combat scenarios.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the most iconic airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The most iconic airplane in the world is the <b>Boeing 747</b>, which revolutionized air travel with its distinctive humpback design.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the most successful airplane in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The most successful airplane in the world is the <b>Cessna 172 Skyhawk</b>, which has been in continuous production since 1956, and the <b>Boeing 737</b>, with over 11,575 units built and counting.</p>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <br>
+            <h3 style="color: red;"><i><u>Technical Aspects of Aviation:</u></i></h3>
+            <br>
+            <div class="faq-question">
+                <h3>Q: How do airplanes fly?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Airplanes fly using the principles of aerodynamics, which involve generating lift through the wings' shape and propulsion provided by engines. They fly by balancing four forces: lift, weight (or gravity), thrust, and drag.</p>
+                    <p><b>Lift: </b>This is the upward force that is created as air flows over and under the wings of an airplane. The wings are designed in a specific shape - flat at the bottom and curved at the top. This shape causes the air on top of the wing to move faster than the air underneath, creating a pressure difference. The higher pressure underneath the wing, compared to the lower pressure on top, creates lift.</p>
+                    <p><b>Weight (or Gravity): </b>This is the force that pulls the airplane down due to its mass and the earth’s gravity. For an airplane to stay in the air, the lift must be equal to or greater than the weight.</p>
+                    <p><b>Thrust: </b>This is the forward force that propels the airplane through the air. It is produced by the airplane’s engines, which can be either jet engines or propellers.</p>
+                    <p><b>Drag: </b>This is the resistance or friction that air exerts against the airplane as it moves through the sky. To continue moving forward, the airplane must produce enough thrust to overcome this drag.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is Mach Speed?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Mach speed is the speed of an object moving through air, or any other fluid substance, divided by the speed of sound as it is in that substance. <b>Sound travels at a speed of 343 m/s or 1235 km/hr or 767 miles/hour, otherwise known as Mach 1.0. </b>As the Mach number increases, the speed of sound is reached and surpassed. <b>Mach 1 is the speed of sound</b>, Mach 2 is twice the speed of sound, and so on. When aircraft travel faster than the speed of sound, they break what is known as the ‘sound barrier’ that can often result in a sonic boom.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: How do airplanes navigate?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Airplanes navigate using a combination of onboard <b>instruments</b>, air traffic control <b>instructions</b>, and satellite-based systems such as GPS.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: How do airplanes communicate with air traffic control?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Airplanes communicate with air traffic control using <b>radio frequencies</b> and data link systems to exchange information about their position, altitude, and flight plan.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: Who are the main jet engine manufacturers in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The main jet engine manufacturers in the world are <b>General Electric (GE), Rolls-Royce, Pratt & Whitney, CFM International, and International Aero Engines (IAE).</b></p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the different types of aircraft engines?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of aircraft engines include <b>turbojet, turbofan, turboprop, piston, and electric</b> engines, each with unique characteristics and applications in aviation.</p>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <br>
+            <h3 style="color: red;"><i><u>Safety and Regulations:</u></i></h3>
+            <br>
+            <div class="faq-question">
+                <h3>Q: What is the safest seat on an airplane?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Statistically, the safest seats on an airplane are the <b>middle seats in the rear</b> of an airplane. However, it’s important to note that air travel is the <b>safest mode of transport.</b></p>
+                    <p>Remember, the best safety measure on any flight is to <b>follow the instructions of the flight crew and to pay attention to safety briefings and information cards.</b></p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the most dangerous part of a flight?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The most dangerous part of a flight is during <b>takeoff and landing</b>, as these are the phases with the highest risk of accidents.</p>
+                    <p>It's important to remember that these are general classifications, and modern aviation safety measures are extensive. Stringent regulations, pilot training, and technological advancements significantly mitigate these risks.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: How do airplanes land in bad weather?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Airplanes can land in bad weather using <b>instrument landing systems</b>, <b>autoland</b> capabilities, and the <b>skills</b> of the flight crew to navigate and land safely in low visibility conditions.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the different types of aviation regulations and authorities in the world?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of aviation regulations and authorities in the world include <b>national aviation authorities, international aviation organizations, air traffic control agencies, aviation safety boards, and aviation regulatory bodies</b> that oversee and enforce aviation laws and standards.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the different types of aviation safety measures and protocols in place for air travel?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of aviation safety measures and protocols in place for air travel include <b>aircraft maintenance, pilot training, air traffic control, safety inspections, emergency procedures, security screenings, passenger briefings, safety equipment, and aviation regulations</b> to ensure the safety and security of air travel.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the different types of aviation weather hazards and their impact on flights?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of aviation weather hazards include <b>turbulence, thunderstorms, icing, fog, low visibility, wind shear, microbursts, volcanic ash, and extreme temperatures</b>, which can impact flights and require pilots to use caution and make adjustments to ensure safe operations.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the different types of aviation emergencies and how are they managed by flight crews and air traffic control?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of aviation emergencies include <b>engine failure, cabin depressurization, fire, medical emergencies, hijacking, severe weather, and fuel exhaustion</b>, which are managed by flight crews and air traffic control through established emergency procedures, communication protocols, and coordination to ensure the safety of passengers and the aircraft.</p>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <br>
+            <h3 style="color: red;"><i><u>Roles in Aviation:</u></i></h3>
+            <br>
+            <div class="faq-question">
+                <h3>Q: What is the role of the pilot in modern aircraft?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The role of the pilot in modern aircraft is to <b>operate</b> the controls, <b>monitor</b> the aircraft's systems, and <b>make decisions</b> to ensure the safety of the flight.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the role of cabin crew on an airplane?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The role of cabin crew on an airplane is to ensure the <b>safety, comfort, and well-being</b> of passengers during the flight, as well as to provide <b>customer service</b> and <b>emergency response</b> as needed.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the role of air traffic control?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Air traffic control is responsible for managing the safe and efficient <b>movement</b> of aircraft in the airspace, providing <b>instructions</b> and guidance to pilots to prevent collisions and maintain orderly traffic flow.</p>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <br>
+            <h3 style="color: red;"><i><u>Career and Education in Aviation:</u></i></h3>
+            <br>
+            <div class="faq-question">
+                <h3>Q: How to become a commercial pilot in India?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: To become a commercial pilot in India, you must complete a <b>commercial pilot license (CPL) course</b> from a DGCA-approved flying school, accumulate the required flying hours, pass the DGCA exams, and obtain a medical certificate. You can then apply for a job with an airline or other aviation organization.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: How to become an Air Force pilot in India?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: To become an Air Force pilot in India, you must qualify for the <b>National Defence Academy (NDA) or Combined Defence Services (CDS) examination</b>, undergo training at the Air Force Academy, and complete the required flying hours and courses to become a commissioned officer in the Indian Air Force.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: How to become a flight attendant?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: To become a flight attendant, you must meet the <b>physical, height, and education requirements</b> of the airline, complete a flight attendant training program, and obtain the necessary certifications and clearances to work on commercial flights.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the process for enrolling in flight training?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The process for enrolling in flight training involves researching and selecting a <b>flight school</b>, meeting the <b>eligibility requirements</b>, completing the <b>ground school</b> and <b>flight training</b> courses, and obtaining the necessary <b>certifications and ratings</b> to become a licensed pilot.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What qualifications do I need to start flight training?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The qualifications you need to start flight training include a <b>high school diploma or equivalent</b>, a <b>student pilot certificate</b>, and meeting the <b>medical and age requirements</b> set by the aviation authorities.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the different types of flight training programs?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of flight training programs include <b>private pilot training, instrument rating, commercial pilot training, airline transport pilot (ATP) certification, flight instructor training, multi-engine training, type rating, recurrent training, and specialized courses</b> for advanced aviation skills.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the different types of aviation education and training programs available for aspiring pilots, engineers, and aviation professionals?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of aviation education and training programs available for aspiring pilots, engineers, and aviation professionals include <b>flight schools, aviation universities, technical institutes, online courses, simulator training, apprenticeships, internships, and specialized training programs</b> that provide the knowledge and skills needed for successful careers in aviation.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the career prospects in aviation?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>The aviation industry offers a wide range of career paths. These include roles such as <b>pilots, flight attendants, flight instructors, aircraft maintenance technicians, air traffic controllers, airport operations personnel, aviation managers, aerospace engineers, airline dispatchers, aviation lawyers, and drone pilots.</b></p>
+                    <p>In addition to these, there are also specialized roles within the industry that cater to various aspects of aviation. The career prospects in aviation are diverse and extend beyond the aforementioned roles. They include opportunities in <b>commercial aviation, military aviation, general aviation, aviation safety, aviation law, aviation medicine, aviation journalism, aviation research, aviation education, and aviation technology.</b></p>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <br>
+            <h3 style="color: red;"><i><u>Financial Aspects and Opportunities:</u></i></h3>
+            <br>
+            <div class="faq-question">
+                <h3>Q: What are the different types of aviation scholarships, grants, and financial aid available for students pursuing aviation education and training?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of aviation scholarships, grants, and financial aid available for students pursuing aviation education and training include <b>merit-based scholarships, need-based scholarships, aviation organization scholarships, government grants, private sponsorships, and student loans</b> that support the academic and professional development of future aviators and aviation professionals.</p>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <br>
+            <h3 style="color: red;"><i><u>Aviation Industry and Future Trends:</u></i></h3>
+            <br>
+            <div class="faq-question">
+                <h3>Q: What are some of the apps and websites used to track real time flights?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Some of the popular apps and websites used to track real-time flights include <b><a href="https://www.flightradar24.com/" target="_blank">FlightRadar24</a>, <a href="https://www.flightaware.com/" target="_blank">FlightAware</a>, <a href="https://planefinder.net/" target="_blank">PlaneFinder</a>, <a href="https://www.radarbox.com/" target="_blank">RadarBox</a>, <a href="https://www.flightstats.com/v2/" target="_blank">FlightStats</a>, <a href="https://www.flightview.com/" target="_blank">FlightView</a>, and airline-specific apps</b> provided by airlines for their passengers. <a href="https://www.makeuseof.com/tag/6-sites-view-maps-airline-flight-paths-bonus-mobile-apps/" target="_blank">Source</a></p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What are the different types of aviation events, airshows, and exhibitions that showcase the latest aircraft, technologies, and industry trends to aviation enthusiasts and professionals?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The different types of aviation events, airshows, and exhibitions that showcase the latest aircraft, technologies, and industry trends to aviation enthusiasts and professionals include <b>aviation trade shows, air expos, flight demonstrations, technology symposiums, aviation conferences, and industry forums</b> that provide opportunities for networking, education, and engagement with the global aviation community.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the environmental impact of aviation?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: Aviation has a significant environmental impact due to <b>carbon emissions</b>, <b>noise pollution</b>, and the <b>consumption of fuels</b>, ie, non-renewable resources.</p>
+                    <p>Efforts to reduce aviation’s environmental footprint include improving fuel economy in aircraft, optimizing air traffic control and flight routes, using aviation biofuel, emissions trading and carbon offsetting, and replacing fuel-powered aircraft with hybrid electric, electric, or hydrogen-powered aircraft.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the future of aviation?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The future of aviation is likely to involve more <b>fuel-efficient</b> aircraft, increased use of electric propulsion, and the development of <b>supersonic and hypersonic</b> travel.</p>
+                </div>
+            </div>
+            <hr>
+            <div class="faq-question">
+                <h3>Q: What is the impact of COVID-19 on aviation?</h3>
+                <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                    <p>A: The COVID-19 pandemic has had a significant impact on aviation, leading to <b>reduced</b> passenger demand, <b>financial</b> challenges for airlines, and changes in <b>travel restrictions</b> and safety protocols.</p>
+                    <p>However, the current state of the aviation industry is gradually <b>recovering</b> from the impacts of it.</p>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const questions = document.querySelectorAll('.faq-question');
+        
+                    questions.forEach(question => {
+                        question.addEventListener('click', function () {
+                            const answer = this.querySelector('.faq-answer');
+                            const isActive = answer.style.maxHeight !== '0px';
+        
+                            questions.forEach(q => {
+                                const ans = q.querySelector('.faq-answer');
+                                if (ans !== answer) {
+                                    ans.style.maxHeight = '0';
+                                }
+                            });
+        
+                            answer.style.maxHeight = isActive ? '0' : answer.scrollHeight + 'px';
+                        });
+                    });
+                });
+            </script>
+        </div>
+        <div id="about" class="content">
+            <h1>About</h1>
+            <p>This page is a comprehensive guide to aviation, covering the history of flight, major aircraft manufacturers, aircraft products, and frequently asked questions about aviation. It aims to provide a broad overview of the world of aviation, from the earliest forms of flight to the most advanced aircraft and the future of aviation.</p>
+            <h3>Author</h3>
+            <p>This website is created as a project for learning web development and to provide information about aviation. It is maintained by <i><b>Aritt Sinha.</b></i></p>
+            <h3>Disclaimer</h3>
+            <p>The information provided on this page is for general informational purposes only. While we strive to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the page or the information, products, services, or related graphics contained on the page for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+            <p>In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this page.</p>
+            <h3>Contact</h3>
+            <p>If you have any questions or concerns about this page, please feel free to contact us at <a href="mailto:aritta2003@yahoo.com">aritta2003@yahoo.com</a></p>
+            <h3>Social Media</h3>
+            <p>Follow me on:</p>
+            <a href="https://www.facebook.com/arittasinha" target="_blank"><img src="facebook.svg" alt="Facebook" style="width:42px;height:42px;"></a>
+            <a href="https://twitter.com/Aritt_Sinha" target="_blank"><img src="twitter.svg" alt="Twitter" style="width:42px;height:42px;"></a>
+            <a href="https://www.linkedin.com/in/arittasinha2003/" target="_blank"><img src="linkedin.svg" alt="LinkedIn" style="width:42px;height:42px;"></a>
+            <a href="https://www.instagram.com/arittsinha/" target="_blank"><img src="instagram.svg" alt="Instagram" style="width:42px;height:42px;"></a>
+            <a href="https://www.youtube.com/@arittsinha" target="_blank"><img src="youtube.svg" alt="YouTube" style="width:42px;height:42px;"></a>
+            <a href="https://www.snapchat.com/add/aritt_sinha" target="_blank"><img src="snapchat.svg" alt="Instagram" style="width:42px;height:42px;"></a>
+            <a href="https://www.reddit.com/user/aritt_sinha/" target="_blank"><img src="reddit.svg" alt="Instagram" style="width:42px;height:42px;"></a>
+            <a href="https://github.com/arittASinha2003" target="_blank"><img src="github.svg" alt="GitHub" style="width:42px;height:42px;"></a>
+            <a href="https://www.pinterest.com/arittasinha/" target="_blank"><img src="pinterest.svg" alt="Pinterest" style="width:42px;height:42px;"></a>
+        </div>
+        <script>
+          document.querySelectorAll('.navbar a').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  const targetId = this.getAttribute('href').substring(1);
+                  const targetElement = document.getElementById(targetId);
+                  const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                  const targetPosition = targetElement.offsetTop - navbarHeight;
+      
+                  window.scrollTo({
+                      top: targetPosition,
+                      behavior: 'smooth'
+                  });
+              });
+          });
+      </script>
+    </body>
+</html>
